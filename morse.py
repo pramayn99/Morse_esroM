@@ -4,7 +4,8 @@ var={'A':'.-','B':'-...','C':'-.-.','D':'-..','E':'.',
      'P':'.--.','Q':'--.-','R':'.-.','S':'...','T':'-',
      'U':'..-','V':'...-','W':'.--','X':'-..-','Y':'-.--','Z':'--..',
      '1':'.----','2':'..---','3':'...--','4':'....-','5':'.....',
-     '6':'-....','7':'--...','8':'---..','9':'----.','0':'-----'}
+     '6':'-....','7':'--...','8':'---..','9':'----.','0':'-----','.':'.-.-.-','?':'..--..',
+     '=':'-...-','\'':'--..--','/':'-..-.','@':'.--.-.'}
 etm=[]
 mte=[]
 def engtomorse():
@@ -29,23 +30,7 @@ def morsetoeng():
     			 if(k==value):
         			mte.append(key)
      	mte.pop(0)
-        
-
-
-def copymorsetoeng():
-	recieved=raw_input("Enter the Morse code to be decrepted").split("   ")
-	print recieved
-	for i in xrange(len(recieved)):
-		for j in recieved[i]:
-			tem="".join(j)
-			
-			let=tem.split(" ")
-			print let
-			for k in let:
-				for key, value in var.iteritems():
-    				 if(k==value):
-        				mte.append(key)
-        		
+                		
 
 print "Press\n\t1.Convert English to Morse\n\t2.Convert Morse to English"
 num=input();
