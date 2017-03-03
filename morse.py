@@ -16,7 +16,7 @@ def engtomorse():
 		etm.append("  ")
 
 def morsetoeng():
-	recieved=raw_input("Enter the Morse code to be decrepted").split("   ")
+	recieved=raw_input("Enter the Morse code to be decrypted").split("   ")
 	#print recieved
 	for i in xrange(len(recieved)):
 		mte.append(" ")
@@ -29,23 +29,7 @@ def morsetoeng():
     			 if(k==value):
         			mte.append(key)
      	mte.pop(0)
-        
-
-
-def copymorsetoeng():
-	recieved=raw_input("Enter the Morse code to be decrepted").split("   ")
-	print recieved
-	for i in xrange(len(recieved)):
-		for j in recieved[i]:
-			tem="".join(j)
-			
-			let=tem.split(" ")
-			print let
-			for k in let:
-				for key, value in var.iteritems():
-    				 if(k==value):
-        				mte.append(key)
-        		
+            		
 
 print "Press\n\t1.Convert English to Morse\n\t2.Convert Morse to English"
 num=input();
@@ -56,5 +40,5 @@ elif(num==2):
 	morsetoeng()
 	print "".join(mte)
 else:
-	print "Please give correct input"
+	print "Please give correct input!!"
 
