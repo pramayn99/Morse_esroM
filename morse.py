@@ -46,7 +46,7 @@ def engtomorse():
 	
 
 def morsetoeng():
-	recieved=raw_input("Enter the Morse code to be decrepted").split("   ")
+	recieved=raw_input("Enter the Morse code to be decrypted").split("   ")
 	#print recieved
 	for i in xrange(len(recieved)):
 		mte.append(" ")
@@ -71,7 +71,7 @@ elif(num==2):
 	morsetoeng()
 	print "".join(mte)
 else:
-	print "Please give correct input"
+	print "Please give correct input!!"
 
 
 
