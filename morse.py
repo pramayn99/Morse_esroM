@@ -1,3 +1,5 @@
+import pygame
+pygame.init()
 var={'A':'.-','B':'-...','C':'-.-.','D':'-..','E':'.',
      'F':'..-.','G':'--.','H':'....','I':'..','J':'.---',
      'K':'-.-','L':'.-..','M':'--','N':'-.','O':'---',
@@ -43,7 +45,6 @@ def engtomorse():
 			etm.append(var[j.upper()])
 			etm.append(" ")
 		etm.append("  ")
-	
 
 def morsetoeng():
 	recieved=raw_input("Enter the Morse code to be decrypted").split("   ")
@@ -67,12 +68,14 @@ if(num==1):
 	audmorse()
 	print "".join(etm)
 	#print etm
+	pygame.mixer.music.load("morseaudio.mp3")
+	pygame.mixer.music.play()
+	pygame.event.wait()
 elif(num==2):
 	morsetoeng()
 	print "".join(mte)
 else:
 	print "Please give correct input!!"
-
 
 
 
